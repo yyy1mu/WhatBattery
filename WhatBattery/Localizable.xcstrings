@@ -1,0 +1,1279 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "--" : {
+
+    },
+    "--%" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "--%"
+          }
+        }
+      }
+    },
+    "%@ · %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        }
+      }
+    },
+    "%@: %lld%%" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: %lld%%"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld accessories" : {
+      "comment" : "Number of visible battery accessories in the menu bar popover.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 个配件"
+          }
+        }
+      }
+    },
+    "%lld%%" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
+    },
+    "%lld%% charging" : {
+      "comment" : "Accessible value for a charging circular battery gauge.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%，充电中"
+          }
+        }
+      }
+    },
+    "7 Days" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 天"
+          }
+        }
+      }
+    },
+    "24 Hours" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 小时"
+          }
+        }
+      }
+    },
+    "30 Days" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 天"
+          }
+        }
+      }
+    },
+    "A Bluetooth battery refresh is already running." : {
+      "comment" : "Error when two BLE battery refreshes overlap.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "另一个蓝牙电量刷新正在进行。"
+          }
+        }
+      }
+    },
+    "Access Denied" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "访问被拒绝"
+          }
+        }
+      }
+    },
+    "Access Granted" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已授权"
+          }
+        }
+      }
+    },
+    "Access Not Requested" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未请求权限"
+          }
+        }
+      }
+    },
+    "Allow Bluetooth access to read BLE battery levels." : {
+      "comment" : "Status when Bluetooth privacy permission is denied.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请允许蓝牙访问以读取 BLE 电量。"
+          }
+        }
+      }
+    },
+    "Allow Input Monitoring access, then restart the app." : {
+      "comment" : "Status shown when macOS blocks a protected HID interface.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请允许“输入监控”权限，然后重新启动应用。"
+          }
+        }
+      }
+    },
+    "Another HID request is already waiting for a response." : {
+      "comment" : "Error when concurrent configured HID requests are attempted.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已有一个 HID 请求正在等待回应。"
+          }
+        }
+      }
+    },
+    "App Language" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用语言"
+          }
+        }
+      }
+    },
+    "Apple & Bluetooth" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 与蓝牙"
+          }
+        }
+      }
+    },
+    "Apple and Bluetooth devices are up to date." : {
+      "comment" : "Status after Apple and Bluetooth battery devices were refreshed.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 与蓝牙设备电量已更新。"
+          }
+        }
+      }
+    },
+    "Battery" : {
+      "comment" : "Name of the only series in a battery history chart.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电量"
+          }
+        }
+      }
+    },
+    "Battery history for %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 的电量历史"
+          }
+        }
+      }
+    },
+    "Battery level" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量"
+          }
+        }
+      }
+    },
+    "Battery Level" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量"
+          }
+        }
+      }
+    },
+    "Bluetooth" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓝牙"
+          }
+        }
+      }
+    },
+    "Bluetooth Device" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓝牙设备"
+          }
+        }
+      }
+    },
+    "Check Again" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次检查"
+          }
+        }
+      }
+    },
+    "Check protected keyboard battery levels" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查受保护键盘的电量"
+          }
+        }
+      }
+    },
+    "Bluetooth is temporarily unavailable." : {
+      "comment" : "Status while the Bluetooth controller is resetting or unavailable.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓝牙暂时不可用。"
+          }
+        }
+      }
+    },
+    "Bluetooth is turned off." : {
+      "comment" : "Status when Bluetooth is disabled on the Mac.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓝牙已关闭。"
+          }
+        }
+      }
+    },
+    "Bluetooth LE Device" : {
+      "comment" : "Fallback name for a BLE peripheral without a published name.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BLE 设备"
+          }
+        }
+      }
+    },
+    "Bluetooth Low Energy" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低功耗蓝牙"
+          }
+        }
+      }
+    },
+    "Bluetooth Low Energy is not supported on this Mac." : {
+      "comment" : "Status when the Mac cannot act as a BLE central.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台 Mac 不支持低功耗蓝牙。"
+          }
+        }
+      }
+    },
+    "Bluetooth permission is required to read BLE battery levels." : {
+      "comment" : "Status when Bluetooth privacy permission is denied.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "读取 BLE 电量需要蓝牙权限。"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "Case" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电盒"
+          }
+        }
+      }
+    },
+    "Change" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "变化"
+          }
+        }
+      }
+    },
+    "Charging" : {
+      "comment" : "A peripheral battery is charging.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电中"
+          }
+        }
+      }
+    },
+    "Choose a longer time range or wait for a new reading." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请选择更长的时间范围，或等待新的电量读数。"
+          }
+        }
+      }
+    },
+    "Clear Battery History?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除电量历史？"
+          }
+        }
+      }
+    },
+    "Clear History" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除历史"
+          }
+        }
+      }
+    },
+    "Connected" : {
+      "comment" : "Status shown after a successful battery reading.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已连接"
+          }
+        }
+      }
+    },
+    "Date" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期"
+          }
+        }
+      }
+    },
+    "Device" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设备"
+          }
+        }
+      }
+    },
+    "Device Rule Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设备规则设置"
+          }
+        }
+      }
+    },
+    "Device Rules" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设备规则"
+          }
+        }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
+          }
+        }
+      }
+    },
+    "Follow System" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟随系统"
+          }
+        }
+      }
+    },
+    "General" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
+          }
+        }
+      }
+    },
+    "History" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历史"
+          }
+        }
+      }
+    },
+    "History will appear after WhatBattery successfully reads a device battery level." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WhatBattery 成功读取设备电量后，历史记录会显示在这里。"
+          }
+        }
+      }
+    },
+    "Input Monitoring permission is required for this device rule." : {
+      "comment" : "Error shown when a rule needs access to a protected keyboard HID interface.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此设备规则需要“输入监控”权限。"
+          }
+        }
+      }
+    },
+    "Input Monitoring permission is required for this device." : {
+      "comment" : "Generic error when macOS denies HID reports for a protected input device.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此设备需要“输入监控”权限。"
+          }
+        }
+      }
+    },
+    "Input Monitoring" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "输入监控"
+          }
+        }
+      }
+    },
+    "Invalid HID protocol configuration: %@" : {
+      "comment" : "Error when a JSON HID protocol rule is invalid.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 协议配置无效：%@"
+          }
+        }
+      }
+    },
+    "L" : {
+
+    },
+    "Language" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "语言"
+          }
+        }
+      }
+    },
+    "Last checked" : {
+      "comment" : "Help text for the last accessory battery check time.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次检查"
+          }
+        }
+      }
+    },
+    "Last known battery" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近电量"
+          }
+        }
+      }
+    },
+    "Lofree and other protected keyboard battery rules require Input Monitoring access. Turn this off to skip those rules and avoid checking permission status." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lofree 和其他受保护键盘的电量规则需要“输入监控”权限。关闭此选项后，应用会跳过这些规则，也不会检查权限状态。"
+          }
+        }
+      }
+    },
+    "Lofree battery monitoring needs Input Monitoring access." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lofree 电量监控需要“输入监控”权限。"
+          }
+        }
+      }
+    },
+    "Later" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "稍后"
+          }
+        }
+      }
+    },
+    "Latest" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新"
+          }
+        }
+      }
+    },
+    "Left" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左侧"
+          }
+        }
+      }
+    },
+    "Lowest battery is %@ at %lld percent." : {
+      "comment" : "Menu bar accessibility label naming the peripheral with the lowest battery.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最低电量设备是 %@，电量为 %lld%%。"
+          }
+        }
+      }
+    },
+    "Maximum" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高"
+          }
+        }
+      }
+    },
+    "Minimum" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最低"
+          }
+        }
+      }
+    },
+    "No Apple or Bluetooth accessory battery information was found." : {
+      "comment" : "Status after a wireless refresh found no readable accessory battery.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未发现可读取的 Apple 或蓝牙配件电量。"
+          }
+        }
+      }
+    },
+    "No Battery Devices Found" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未发现电池设备"
+          }
+        }
+      }
+    },
+    "No Battery History" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无电量历史"
+          }
+        }
+      }
+    },
+    "No Data in This Range" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此时间范围内没有数据"
+          }
+        }
+      }
+    },
+    "No Devices" : {
+
+    },
+    "No readable peripheral battery is available." : {
+      "comment" : "Menu bar accessibility label when no device has a battery reading.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前没有可读取的外设电量。"
+          }
+        }
+      }
+    },
+    "No valid device rules were loaded." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有加载到有效的设备规则。"
+          }
+        }
+      }
+    },
+    "Not charging" : {
+      "comment" : "A peripheral battery is not charging.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未充电"
+          }
+        }
+      }
+    },
+    "Not Checked" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未检查"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
+          }
+        }
+      }
+    },
+    "Open Bluetooth Privacy Settings" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开蓝牙隐私设置"
+          }
+        }
+      }
+    },
+    "Open Input Monitoring Settings" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开输入监控设置"
+          }
+        }
+      }
+    },
+    "Open Settings" : {
+      "comment" : "Button that opens the relevant macOS privacy settings pane.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开设置"
+          }
+        }
+      }
+    },
+    "Permission Status" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "权限状态"
+          }
+        }
+      }
+    },
+    "Quit WhatBattery" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出 WhatBattery"
+          }
+        }
+      }
+    },
+    "R" : {
+
+    },
+    "Reading Apple and Bluetooth battery levels…" : {
+      "comment" : "Status while Apple and Bluetooth accessory batteries are being read.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在读取 Apple 与蓝牙设备电量…"
+          }
+        }
+      }
+    },
+    "Reading battery level…" : {
+      "comment" : "Status shown while requesting a USB device battery level.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在读取电量…"
+          }
+        }
+      }
+    },
+    "Reading battery levels…" : {
+      "comment" : "Accessibility label for the popover refresh indicator.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在读取电量…"
+          }
+        }
+      }
+    },
+    "Request Access" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请求权限"
+          }
+        }
+      }
+    },
+    "Refresh All" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部刷新"
+          }
+        }
+      }
+    },
+    "Refresh Bluetooth" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新蓝牙设备"
+          }
+        }
+      }
+    },
+    "Reload Rules" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新加载规则"
+          }
+        }
+      }
+    },
+    "Restart App" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新启动应用"
+          }
+        }
+      }
+    },
+    "Restart Now" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立即重启"
+          }
+        }
+      }
+    },
+    "Restart the app to apply the selected language everywhere." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重启应用后，所选语言将应用到所有菜单和状态信息。"
+          }
+        }
+      }
+    },
+    "Restart WhatBattery?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重启 WhatBattery？"
+          }
+        }
+      }
+    },
+    "Right" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右侧"
+          }
+        }
+      }
+    },
+    "Rule Problems" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "规则问题"
+          }
+        }
+      }
+    },
+    "Rules directory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "规则目录"
+          }
+        }
+      }
+    },
+    "Rules files" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "规则文件"
+          }
+        }
+      }
+    },
+    "Searching for %@…" : {
+      "comment" : "Status shown while a configured USB battery device is not connected.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在查找 %@…"
+          }
+        }
+      }
+    },
+    "Select a point on the chart to inspect its battery level." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在图表中选择一个点以查看电量。"
+          }
+        }
+      }
+    },
+    "Selected Date" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已选日期"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        }
+      }
+    },
+    "Show Rules Directory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示规则目录"
+          }
+        }
+      }
+    },
+    "Simplified Chinese" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "简体中文"
+          }
+        }
+      }
+    },
+    "Status" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "状态"
+          }
+        }
+      }
+    },
+    "The device did not respond and may be sleeping." : {
+      "comment" : "Generic status when a battery request times out.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设备没有回应，可能正在休眠。"
+          }
+        }
+      }
+    },
+    "The device did not respond. Keeping the last battery level." : {
+      "comment" : "Status shown after a USB battery request times out.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设备没有回应；保留上次电量。"
+          }
+        }
+      }
+    },
+    "The device does not expose a supported battery feature." : {
+      "comment" : "Generic status when a matched device lacks the expected battery feature.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设备没有提供受支持的电池功能。"
+          }
+        }
+      }
+    },
+    "The HID device did not respond." : {
+      "comment" : "Error when a configured HID battery request times out.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 设备没有回应。"
+          }
+        }
+      }
+    },
+    "The HID device returned an invalid battery level: %lld." : {
+      "comment" : "Error when a configured HID device reports a percentage above 100.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 设备返回了无效电量：%lld。"
+          }
+        }
+      }
+    },
+    "The HID device returned protocol error 0x%@." : {
+      "comment" : "Configured HID protocol error containing a hexadecimal code.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 设备返回协议错误 0x%@。"
+          }
+        }
+      }
+    },
+    "The HID device was disconnected." : {
+      "comment" : "Error when a configured HID device disconnects during a request.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 设备已断开。"
+          }
+        }
+      }
+    },
+    "The HID protocol variable %@ has no value." : {
+      "comment" : "Error when a configured HID request references an unavailable variable.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 协议变量 %@ 没有可用值。"
+          }
+        }
+      }
+    },
+    "The HID response is malformed." : {
+      "comment" : "Error when a configured HID response is too short or invalid.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HID 回应格式无效。"
+          }
+        }
+      }
+    },
+    "The matched device does not expose the expected battery feature." : {
+      "comment" : "Status shown when a device matches a rule but not its battery protocol.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匹配的设备没有提供规则所需的电池功能。"
+          }
+        }
+      }
+    },
+    "The receiver is connected, but the peripheral is offline." : {
+      "comment" : "Generic status when a USB receiver cannot reach its wireless peripheral.\nStatus shown when a receiver cannot reach its wireless peripheral.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接收器已连接，但外设不在线。"
+          }
+        }
+      }
+    },
+    "This permanently deletes battery history for all devices." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这将永久删除所有设备的电量历史。"
+          }
+        }
+      }
+    },
+    "Time Range" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间范围"
+          }
+        }
+      }
+    },
+    "Unable to open the HID interface: %@" : {
+      "comment" : "Error shown when IOHIDDeviceOpen fails.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法打开 HID interface：%@"
+          }
+        }
+      }
+    },
+    "Unable to Open the Rules Directory" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法打开规则目录"
+          }
+        }
+      }
+    },
+    "Unable to send the HID report: %@" : {
+      "comment" : "Error shown when IOHIDDeviceSetReport fails.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发送 HID 报告失败：%@"
+          }
+        }
+      }
+    },
+    "Unable to start the HID device manager: %@" : {
+      "comment" : "Error shown when IOHIDManagerOpen fails.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法启动 HID 设备管理器：%@"
+          }
+        }
+      }
+    },
+    "Unknown" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知"
+          }
+        }
+      }
+    },
+    "USB" : {
+
+    },
+    "Waiting to check Apple and Bluetooth accessories…" : {
+      "comment" : "Initial Apple and Bluetooth battery monitor status.",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在等待检查 Apple 与蓝牙配件…"
+          }
+        }
+      }
+    },
+    "WhatBattery" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WhatBattery"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

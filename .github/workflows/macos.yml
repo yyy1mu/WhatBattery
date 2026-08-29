@@ -1,0 +1,163 @@
+name: macOS CI and Release
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/') }}
+
+env:
+  PROJECT: WhatBattery.xcodeproj
+  SCHEME: WhatBattery
+  XCODE_PATH: /Applications/Xcode_26.6.app/Contents/Developer
+
+jobs:
+  test:
+    name: Build and test
+    runs-on: macos-26
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Select Xcode 26.6
+        run: sudo xcode-select --switch "$XCODE_PATH"
+
+      - name: Show toolchain
+        run: xcodebuild -version
+
+      - name: Run unit tests
+        run: |
+          xcodebuild test \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration Debug \
+            -destination "platform=macOS" \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData-Tests" \
+            CODE_SIGNING_ALLOWED=NO
+
+  release:
+    name: Build release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: test
+    runs-on: macos-26
+    permissions:
+      contents: write
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Select Xcode 26.6
+        run: sudo xcode-select --switch "$XCODE_PATH"
+
+      - name: Verify tag matches project version
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag_version="${GITHUB_REF_NAME#v}"
+          project_version="$(
+            xcodebuild \
+              -project "$PROJECT" \
+              -scheme "$SCHEME" \
+              -configuration Release \
+              -showBuildSettings \
+            | awk '/ MARKETING_VERSION = / { print $3; exit }'
+          )"
+
+          if [[ "$tag_version" != "$project_version" ]]; then
+            echo "Tag version $tag_version does not match MARKETING_VERSION $project_version" >&2
+            exit 1
+          fi
+
+      - name: Build universal Release app
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild build \
+            -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -destination "generic/platform=macOS" \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData-Release" \
+            CONFIGURATION_BUILD_DIR="$RUNNER_TEMP/Release" \
+            CODE_SIGNING_ALLOWED=NO \
+            ONLY_ACTIVE_ARCH=NO \
+            ARCHS="arm64 x86_64"
+
+      - name: Apply ad-hoc signature
+        shell: bash
+        run: |
+          set -euo pipefail
+          app_path="$RUNNER_TEMP/Release/WhatBattery.app"
+
+          codesign \
+            --force \
+            --deep \
+            --sign - \
+            --options runtime \
+            --entitlements WhatBattery/WhatBattery.entitlements \
+            "$app_path"
+
+          codesign --verify --deep --strict --verbose=2 "$app_path"
+          lipo -info "$app_path/Contents/MacOS/WhatBattery"
+
+      - name: Package app
+        id: package
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="WhatBattery-${GITHUB_REF_NAME}-macOS.zip"
+          checksum="${archive}.sha256"
+
+          ditto \
+            -c \
+            -k \
+            --sequesterRsrc \
+            --keepParent \
+            "$RUNNER_TEMP/Release/WhatBattery.app" \
+            "$archive"
+
+          shasum -a 256 "$archive" > "$checksum"
+          echo "archive=$archive" >> "$GITHUB_OUTPUT"
+          echo "checksum=$checksum" >> "$GITHUB_OUTPUT"
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARCHIVE: ${{ steps.package.outputs.archive }}
+          CHECKSUM: ${{ steps.package.outputs.checksum }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          release_note="This build is ad-hoc signed and is not notarized by Apple."
+
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "$ARCHIVE" "$CHECKSUM" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" \
+              "$ARCHIVE" \
+              "$CHECKSUM" \
+              --verify-tag \
+              --title "WhatBattery $GITHUB_REF_NAME" \
+              --notes "$release_note" \
+              --generate-notes
+          fi
+
+      - name: Upload workflow artifact
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: WhatBattery-${{ github.ref_name }}-macOS
+          path: |
+            ${{ steps.package.outputs.archive }}
+            ${{ steps.package.outputs.checksum }}
+          if-no-files-found: error

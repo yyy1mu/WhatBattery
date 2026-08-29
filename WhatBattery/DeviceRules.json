@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 2,
+  "catalogMode": "complete",
+  "systemAccessoryRules": {
+    "appleVendorIDs": ["0x004C", "0x05AC"],
+    "appleNameContains": [
+      "AirPods",
+      "Magic Keyboard",
+      "Magic Mouse",
+      "Magic Trackpad"
+    ],
+    "kindRules": [
+      {
+        "kind": "earbuds",
+        "nameContains": ["AirPods"],
+        "minorTypeContains": [],
+        "usagePage": null,
+        "usage": null,
+        "componentKindsAny": ["left", "right", "case"],
+        "requiresAppleAccessory": true
+      },
+      {
+        "kind": "keyboard",
+        "nameContains": ["keyboard"],
+        "minorTypeContains": ["keyboard"],
+        "usagePage": "0x01",
+        "usage": "0x06",
+        "componentKindsAny": [],
+        "requiresAppleAccessory": false
+      },
+      {
+        "kind": "mouse",
+        "nameContains": ["mouse"],
+        "minorTypeContains": ["mouse"],
+        "usagePage": "0x01",
+        "usage": "0x02",
+        "componentKindsAny": [],
+        "requiresAppleAccessory": false
+      },
+      {
+        "kind": "trackpad",
+        "nameContains": ["trackpad"],
+        "minorTypeContains": ["trackpad"],
+        "usagePage": "0x0D",
+        "usage": null,
+        "componentKindsAny": [],
+        "requiresAppleAccessory": false
+      },
+      {
+        "kind": "headphones",
+        "nameContains": ["headphone", "headset", "buds"],
+        "minorTypeContains": ["headphone", "headset"],
+        "usagePage": null,
+        "usage": null,
+        "componentKindsAny": [],
+        "requiresAppleAccessory": false
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "logitech.g304-g305",
+      "displayName": "Logitech G304 / G305",
+      "symbolName": "computermouse",
+      "match": {
+        "deviceIDs": [
+          { "vendorID": "0x046D", "productID": "0xC53F" }
+        ],
+        "transport": "USB",
+        "usagePage": "0xFF00",
+        "usage": null,
+        "usageMatch": "primary",
+        "minimumInputReportLength": 20,
+        "minimumOutputReportLength": 20
+      },
+      "protocol": {
+        "reportID": "0x11",
+        "reportLength": 20,
+        "requestTimeoutMilliseconds": 2000,
+        "maximumAttempts": 3,
+        "retryOnTimeout": false,
+        "responseEchoes": [
+          { "responseOffset": 1, "requestOffset": 1, "length": 3 }
+        ],
+        "errorResponse": {
+          "markerOffset": 2,
+          "markers": ["0xFF", "0x8F"],
+          "echoes": [
+            { "responseOffset": 1, "requestOffset": 1, "length": 1 },
+            { "responseOffset": 3, "requestOffset": 2, "length": 2 }
+          ],
+          "codeOffset": 5,
+          "retryableCodes": ["0x08"]
+        },
+        "variables": {
+          "deviceIndex": "0x01"
+        },
+        "steps": [
+          {
+            "id": "resolve-battery-feature",
+            "request": ["0x11", "$deviceIndex", "0x00", "0x01", "0x10", "0x00"],
+            "requirements": [
+              {
+                "offset": 4,
+                "comparison": "notEquals",
+                "value": "0x00",
+                "failure": "unsupported"
+              }
+            ],
+            "captures": [
+              { "name": "featureIndex", "offset": 4 }
+            ],
+            "runOnce": true
+          },
+          {
+            "id": "read-battery",
+            "request": ["0x11", "$deviceIndex", "$featureIndex", "0x01"]
+          }
+        ],
+        "battery": {
+          "levelOffset": 4,
+          "chargingOffset": null,
+          "voltageHighOffset": null,
+          "voltageLowOffset": null
+        }
+      },
+      "pollingIntervalSeconds": 300,
+      "requiresInputMonitoring": false
+    },
+    {
+      "id": "lofree.compx-keyboard",
+      "displayName": "Lofree 2.4 GHz Keyboard",
+      "symbolName": "keyboard",
+      "match": {
+        "vendorIDs": ["0x05AC", "0x3554", "0x3434", "0x388D"],
+        "productIDs": ["0x024F", "0xFA0A", "0xF811", "0x0E41", "0x0009", "0x0008"],
+        "transport": "USB",
+        "usagePage": "0xFF02",
+        "usage": "0x0002",
+        "usageMatch": "any",
+        "minimumInputReportLength": 17,
+        "minimumOutputReportLength": 17
+      },
+      "protocol": {
+        "reportID": "0x08",
+        "reportLength": 17,
+        "requestTimeoutMilliseconds": 200,
+        "maximumAttempts": 5,
+        "retryOnTimeout": true,
+        "checksum": {
+          "offset": 16,
+          "target": "0x55"
+        },
+        "responseEchoes": [
+          { "responseOffset": 0, "requestOffset": 0, "length": 5 }
+        ],
+        "steps": [
+          {
+            "id": "check-online",
+            "request": ["0x08", "0x03", "0x00", "0x00", "0x00", "0x80"],
+            "requirements": [
+              {
+                "offset": 5,
+                "comparison": "equals",
+                "value": "0x81",
+                "failure": "peripheralOffline"
+              }
+            ]
+          },
+          {
+            "id": "read-battery",
+            "request": ["0x08", "0x04", "0x00", "0x00", "0x00", "0x80"]
+          }
+        ],
+        "battery": {
+          "levelOffset": 6,
+          "chargingOffset": 7,
+          "voltageHighOffset": 8,
+          "voltageLowOffset": 9
+        }
+      },
+      "pollingIntervalSeconds": 300,
+      "requiresInputMonitoring": true
+    }
+  ]
+}

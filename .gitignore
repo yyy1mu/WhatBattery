@@ -1,0 +1,12 @@
+.DS_Store
+
+# Xcode build products
+Build/
+DerivedData/
+.derivedData/
+*.xcresult
+
+# Per-user Xcode state
+xcuserdata/
+*.xcuserstate
+**/*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
